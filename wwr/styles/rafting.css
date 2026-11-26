@@ -2,11 +2,8 @@
     --primary-color: #0b4f6c;
     --secondary-color: #01baef;
     --accent-color: #f4f4f4;
+    --heading-color: #1c2541;
     --text-color: #333333;
-    --light-color: #ffffff;
-    --overlay-dark: rgba(0, 0, 0, 0.6);
-    --overlay-light: rgba(255, 255, 255, 0.9);
-
     --body-font: Arial, sans-serif;
     --heading-font: Georgia, serif;
 }
