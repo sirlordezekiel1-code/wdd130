@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #0b4f6c;
+    --secondary-color: #01baef;
+    --accent-color: #f4f4f4;
+    --heading-color: #1c2541;
+    --text-color: #333333;
+
+    --body-font: Arial, sans-serif;
+    --heading-font: Georgia, serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,18 +16,23 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
+    color: var(--text-color);
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* HEADER */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+}
 
 header {
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: var(--accent-color);
     padding: 20px;
 }
 
@@ -31,11 +47,14 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: bold;
+    padding: 10px;
 }
 
-/* HERO */
+nav a:hover {
+    color: var(--primary-color);
+}
 
 .hero {
     position: relative;
@@ -43,6 +62,7 @@ nav a {
 
 .hero img {
     width: 100%;
+    display: block;
 }
 
 .hero h1 {
@@ -51,7 +71,7 @@ nav a {
     width: 100%;
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
 }
 
@@ -60,16 +80,15 @@ nav a {
     bottom: 30px;
     left: 30px;
     right: 30px;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
 }
 
 .hero article img {
     float: right;
     width: 150px;
+    margin-left: 15px;
 }
-
-/* HISTORY */
 
 .history {
     padding: 40px 20px;
@@ -90,8 +109,6 @@ nav a {
 .history-content img {
     width: 100%;
 }
-
-/* ADVENTURES */
 
 .adventures {
     padding: 40px 20px;
@@ -123,14 +140,12 @@ figcaption {
     font-size: 0.9rem;
 }
 
-/* FOOTER */
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: var(--accent-color);
 }
 
 .socialmedia {
